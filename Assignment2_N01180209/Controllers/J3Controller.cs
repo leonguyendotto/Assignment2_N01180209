@@ -10,24 +10,24 @@ namespace Assignment2_N01180209.Controllers
     public class J3Controller : ApiController
     {
 		/// <summary>
-		/// 
+		/// Enter a string and it will return a total int equal to how many seconds you need.
 		/// </summary>
 		/// <param name="str"></param>
-		/// <returns></returns>
-        [Route("api/J3/phoneGame/{str}")]
+		/// <returns>"a" = 1, "abba" = 12 , "dada" = 4</returns>
+		[Route("api/J3/phoneGame/{str}")]
         [HttpGet]
         public int phoneGame(string str)
         {
 			int totalTime = 0;
 			int currChar = 0;
 			int prevChar = 0;
-			if (str == "halt")// if user input halt = exit the program 
+			if (str == "halt")// if user input "halt" = exit the program (in other program) but still works with this (=0)
 			{
 				return totalTime;
 			}
 			for (int i = 0; i < str.Length; i++)
 			{
-				currChar = str[i];
+				currChar = str[i]; // holds string value
 				if (i > 0)
 				{
 					prevChar = str[i - 1];
@@ -93,3 +93,13 @@ namespace Assignment2_N01180209.Controllers
 	
     }
 }
+/* This J3 bases on the J3 CCC '06. 
+ * How my program works?
+ * Enter any string and it will return int values base on user input. 
+ * I use the ASCII Table to convert the string value to decimal (int) 
+ * There are 3 special input here: key 7 8 9 
+ * Key 7 & 9 have 4 letters so they are in the 2 special condition (else if)
+ * Key 8 behind key 7 so the value will be changed because the "s" letter
+ * In the challenge they put the "halt" as an exit program when user input equal it. But in this program still runs and returns a 0 - This is I don't know why? 
+ * I use the Console.WriteLine in C# to understand more how the codes work but It seems doesn't work here
+ * Also, thank you for giving me extra time with this assignment. What you did means a lot to me! */
