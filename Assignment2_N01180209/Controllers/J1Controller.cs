@@ -10,8 +10,8 @@ namespace Assignment2_N01180209.Controllers
     public class J1Controller : ApiController
     {
         /// <summary>
-        /// The program should prompt the user for a number for each type of
-        /// item then calculate and display the Calorie total
+        /// The program should return the  a number for each type of
+        /// item then calculate and display the total calories.
         /// </summary>
         /// <param name="burger">1</param>
         /// <param name="drink">2</param>

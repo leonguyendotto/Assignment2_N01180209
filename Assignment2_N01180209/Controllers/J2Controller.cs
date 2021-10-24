@@ -10,7 +10,7 @@ namespace Assignment2_N01180209.Controllers
     public class J2Controller : ApiController
     {
 		/// <summary>
-		/// 
+		/// Collects the result of 2 dices then compares value of each to see how many ways we can get the 10 pairs. Returns a string with the results
 		/// </summary>
 		/// <param name="m">1</param>
 		/// <param name="n">2</param>
